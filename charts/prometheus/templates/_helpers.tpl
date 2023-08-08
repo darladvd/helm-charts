@@ -109,7 +109,7 @@ We truncate at 63 chars because some Kubernetes name fields are limited to this 
 */}}
 
 {{- define "prometheus.alertmanager.fullname" -}}
-{{- template "alertmanager.fullname" .Subcharts.alertmanager -}}
+{{- include "prometheus.alertmanager.fullname" . -}}
 {{- end -}}
 
 {{/*
